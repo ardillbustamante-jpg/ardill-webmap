@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <style>
+        html, body {
+            background-color: #ffffff;
+        }
+        .ol-control > * {
+            background-color: #f8f8f8!important;
+            color: #444444!important;
+            border-radius: 0px;
+        }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
+            color: #444444!important;
+        }
+        .search-layer-input-search {
+            background-color: #f8f8f8!important;
+        }
+        .ol-control > *:focus, .ol-control >*:hover {
+            background-color: rgba(248, 248, 248, 0.7)!important;
+        } 
+        .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 2px !important;
+        } 
+        </style>
+
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources/qgis2web_expressions.js"></script>
+<script src="resources/proj4.js"></script>
+        <script>proj4.defs('EPSG:3857','+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs');</script>
+        <script src="./resources/functions.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="./resources/ol-layerswitcher.js"></script>
+        <script src="resources/photon-geocoder-autocomplete.min.js"></script>
+        <script src="layers/TTTICKETPOINT_3.js"></script><script src="layers/TTTICKETLINE_4.js"></script><script src="layers/POLE_REGION13_5.js"></script><script src="layers/POLE_REGION12_6.js"></script><script src="layers/POLE_REGION11_7.js"></script><script src="layers/POLE_REGION10_8.js"></script><script src="layers/POLE_REGION9_9.js"></script><script src="layers/POLE_REGION8_10.js"></script><script src="layers/POLE_REGION7_11.js"></script><script src="layers/POLE_CAR_12.js"></script><script src="layers/POLE_REGION5_13.js"></script><script src="layers/POLE_REGION4B_14.js"></script><script src="layers/POLE_REGION4A_15.js"></script><script src="layers/POLE_REGION3_16.js"></script><script src="layers/POLE_REGION2_17.js"></script><script src="layers/POLE_REGION1_18.js"></script><script src="layers/POLE_NCR_19.js"></script><script src="layers/CLOSURE_REGION_12_20.js"></script><script src="layers/CLOSURE_REGION_13_21.js"></script><script src="layers/CLOSURE_REGION_11_22.js"></script><script src="layers/CLOSURE_REGION_9_23.js"></script><script src="layers/CLOSURE_REGION_10_24.js"></script><script src="layers/CLOSURE_BARMM_25.js"></script><script src="layers/CLOSURE_REGION_8_26.js"></script><script src="layers/CLOSURE_REGION_7_27.js"></script><script src="layers/CLOSURE_REGION_6_28.js"></script><script src="layers/CLOSURE_REGION_5_29.js"></script><script src="layers/CLOSURE_REGION_4B_30.js"></script><script src="layers/CLOSURE_REGION_4A_31.js"></script><script src="layers/CLOSURE_REGION_3_32.js"></script><script src="layers/CLOSURE_REGION_2_33.js"></script><script src="layers/CLOSURE_REGION_1_34.js"></script><script src="layers/CLOSURE_NCR_35.js"></script><script src="layers/CLOSURE_CAR_36.js"></script>
+        <script src="styles/TTTICKETPOINT_3_style.js"></script><script src="styles/TTTICKETLINE_4_style.js"></script><script src="styles/POLE_REGION13_5_style.js"></script><script src="styles/POLE_REGION12_6_style.js"></script><script src="styles/POLE_REGION11_7_style.js"></script><script src="styles/POLE_REGION10_8_style.js"></script><script src="styles/POLE_REGION9_9_style.js"></script><script src="styles/POLE_REGION8_10_style.js"></script><script src="styles/POLE_REGION7_11_style.js"></script><script src="styles/POLE_CAR_12_style.js"></script><script src="styles/POLE_REGION5_13_style.js"></script><script src="styles/POLE_REGION4B_14_style.js"></script><script src="styles/POLE_REGION4A_15_style.js"></script><script src="styles/POLE_REGION3_16_style.js"></script><script src="styles/POLE_REGION2_17_style.js"></script><script src="styles/POLE_REGION1_18_style.js"></script><script src="styles/POLE_NCR_19_style.js"></script><script src="styles/CLOSURE_REGION_12_20_style.js"></script><script src="styles/CLOSURE_REGION_13_21_style.js"></script><script src="styles/CLOSURE_REGION_11_22_style.js"></script><script src="styles/CLOSURE_REGION_9_23_style.js"></script><script src="styles/CLOSURE_REGION_10_24_style.js"></script><script src="styles/CLOSURE_BARMM_25_style.js"></script><script src="styles/CLOSURE_REGION_8_26_style.js"></script><script src="styles/CLOSURE_REGION_7_27_style.js"></script><script src="styles/CLOSURE_REGION_6_28_style.js"></script><script src="styles/CLOSURE_REGION_5_29_style.js"></script><script src="styles/CLOSURE_REGION_4B_30_style.js"></script><script src="styles/CLOSURE_REGION_4A_31_style.js"></script><script src="styles/CLOSURE_REGION_3_32_style.js"></script><script src="styles/CLOSURE_REGION_2_33_style.js"></script><script src="styles/CLOSURE_REGION_1_34_style.js"></script><script src="styles/CLOSURE_NCR_35_style.js"></script><script src="styles/CLOSURE_CAR_36_style.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/Autolinker.min.js"></script>
+        <script src="./resources/qgis2web.js"></script>        
+    </body>
+</html>
